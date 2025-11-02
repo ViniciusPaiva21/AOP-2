@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criaturas Míticas - Portal Mitos e Lendas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+
+</head>
+<body>
+    <header>
+        <h1>Portal Mitos e Lendas</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="deuses-gregos.html">Deuses Gregos</a>
+        <a href="mitos-nordicos.html">Mitos Nórdicos</a>
+        <a href="criaturas-miticas.html">Criaturas Míticas</a>
+        <a href="contatos.html">Contatos</a>
+    </nav>
+
+    <div class="container">
+        <h2>🐉 Bestiário: Criaturas Míticas de Todo o Mundo</h2>
+        
+        <p>Em todas as culturas, existem seres fantásticos que habitam os limites da realidade e da imaginação. Estas criaturas não apenas povoam pesadelos, mas também carregam um profundo simbolismo cultural.</p>
+
+        <section>
+            <h3>Criaturas Gregas:</h3>
+            <ul>
+                <li>**Minotauro:** Metade homem, metade touro, aprisionado no Labirinto.</li>
+                <li>**Hidra de Lerna:** Serpente aquática com múltiplas cabeças que se regeneram ao serem cortadas.</li>
+                <li>**Sereias:** Seres híbridos que seduziam marinheiros com seus cantos mortais.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Criaturas Nórdicas:</h3>
+            <ul>
+                <li>**Fenrir:** O lobo gigante, filho de Loki, destinado a devorar Odin no Ragnarok.</li>
+                <li>**Jörmungandr:** A serpente do mundo, tão grande que circunda Midgard.</li>
+            </ul>
+        </section>
+
+        <p>Explore nosso bestiário e descubra o simbolismo, a origem e o destino de cada uma destas lendas!</p>
+    </div>
+    <div id="meu-rodape"></div>
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => document.getElementById('meu-rodape').innerHTML = data)
+    .catch(error => console.error('Erro ao carregar footer:', error));
+</script>
+</body>
+</html>

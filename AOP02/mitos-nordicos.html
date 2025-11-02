@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitos Nórdicos - Portal Mitos e Lendas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+
+</head>
+<body>
+    <header>
+        <h1>Portal Mitos e Lendas</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="deuses-gregos.html">Deuses Gregos</a>
+        <a href="mitos-nordicos.html">Mitos Nórdicos</a>
+        <a href="criaturas-miticas.html">Criaturas Míticas</a>
+        <a href="contatos.html">Contatos</a>
+    </nav>
+
+    <div class="container">
+        <h2>🧊 A Épica Lenda dos Mitos Nórdicos e Ragnarok</h2>
+        
+        <p>A mitologia nórdica é marcada por um profundo senso de destino e pelo fim glorioso e inevitável dos deuses no Ragnarok. O centro de toda a existência é a árvore **Yggdrasil**, que conecta os Nove Mundos.</p>
+
+        <ul>
+            <li>**Odin:** O Pai de Todos, deus da sabedoria, poesia, guerra e magia.</li>
+            <li>**Thor:** O protetor de Midgard (Terra), deus do trovão, força e protetor da humanidade.</li>
+            <li>**Loki:** O trapaceiro, gigante e deus da astúcia, figura central em muitos conflitos e no Ragnarok.</li>
+            <li>**Ragnarok:** A profecia do crepúsculo dos deuses, o fim do mundo e seu renascimento.</li>
+        </ul>
+
+        <p>Aqui desvendamos os mistérios das sagas islandesas, a coragem dos guerreiros e as histórias por trás dos reinos de Asgard, Midgard e Jotunheim.</p>
+    </div>
+   <div id="meu-rodape"></div>
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => document.getElementById('meu-rodape').innerHTML = data)
+    .catch(error => console.error('Erro ao carregar footer:', error));
+</script>
+
+</body>
+</html>

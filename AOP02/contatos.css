@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Uncial+Antiqua&display=swap');
+
+/*
+ * Arquivo: contatos.css
+ * Estilização para a página de Contatos do Portal Mitos e Lendas
+ */
+
+/* Paleta de cores épica */
+:root {
+    --primary-color: #5D4037;    /* Marrom escuro (Cabeçalho/Menu) */
+    --secondary-color: #D4A017;  /* Bronze/Dourado (detalhes e hover) */
+    --accent-color: #8B0000;     /* Vermelho escuro (títulos e botões) */
+    --text-color: #2A2A2A;       /* Cinza escuro (texto principal) */
+    --background-light: #FDF6E3; /* Creme claro estilo pergaminho */
+    --background-dark: #3E2F1C;  /* Marrom escuro de fundo alternativo */
+}
+
+/* Base */
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fffde7; /* Pergaminho leve */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Header e Navegação */
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin: 0;
+    font-size: 3em;
+}
+
+nav {
+    background-color: var(--background-dark);
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Uncial Antiqua', cursive;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* Título do formulário */
+.container h2 {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+}
+
+/* Formulário */
+form {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff8dc; /* leve pergaminho */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Georgia', serif;
+    background-color: #fffde7;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d32f2f;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 5px 10px;
+    }
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+    border-top: 3px solid var(--secondary-color);
+    margin-top: 40px;
+}
+
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 900px) {
+    .destaque-card { width: calc(50% - 20px); }
+}
+@media (max-width: 600px) {
+    .destaque-card { width: 100%; }
+    .menu { flex-direction: column; }
+    .menu li { margin-bottom: 5px; }
+}
