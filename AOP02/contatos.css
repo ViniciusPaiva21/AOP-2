@@ -2,17 +2,17 @@
 
 /*
  * Arquivo: contatos.css
- * Estilização para a página de Contatos do Portal Mitos e Lendas
+ * Estilização para a página de Contatos do Portal Mitos e Lendas - PADRONIZADO
  */
 
-/* Paleta de cores épica */
+/* Variáveis de Cores (Paleta de cores Clássica/Épica) - IGUAL AO style.css */
 :root {
-    --primary-color: #5D4037;    /* Marrom escuro (Cabeçalho/Menu) */
-    --secondary-color: #D4A017;  /* Bronze/Dourado (detalhes e hover) */
-    --accent-color: #8B0000;     /* Vermelho escuro (títulos e botões) */
-    --text-color: #2A2A2A;       /* Cinza escuro (texto principal) */
-    --background-light: #FDF6E3; /* Creme claro estilo pergaminho */
-    --background-dark: #3E2F1C;  /* Marrom escuro de fundo alternativo */
+    --primary-color: #4B3621; /* Marrom pergaminho escuro */
+    --secondary-color: #D4A017; /* Bronze/Dourado */
+    --accent-color: #B71C1C; /* Vermelho Escuro (Épico/Poder) */
+    --text-color: #FFD700; /* Texto dourado para contraste (USADO NO HEADER/FOOTER) */
+    --background-light: #F9F9F0; /* Fundo claro tipo pergaminho */
+    --background-dark: #2A2A2A; /* Marrom escuro de fundo alternativo */
 }
 
 /* Base */
@@ -22,37 +22,38 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--background-light);
-    color: var(--text-color);
+    color: #333; /* Cor do texto principal (padrão do style.css) */
 }
 
 .container {
     width: 90%;
-    max-width: 900px;
-    margin: 40px auto;
+    max-width: 1200px; /* Mais amplo, igual ao style.css */
+    margin: 30px auto; /* Margin ajustada */
     padding: 30px;
-    background-color: #fffde7; /* Pergaminho leve */
+    background-color: white; /* Cor do fundo do container ajustada */
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Header e Navegação */
+/* Header e Navegação - PADRONIZADO */
 header {
     background-color: var(--primary-color);
-    color: var(--secondary-color);
+    color: var(--text-color); /* Dourado */
     padding: 40px 20px;
     text-align: center;
 }
 
 header h1 {
+    color: var(--secondary-color); /* Bronze */
     font-family: 'Cinzel', serif;
     letter-spacing: 2px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Sombra ajustada */
     margin: 0;
     font-size: 3em;
 }
 
 nav {
-    background-color: var(--background-dark);
+    background-color: #3E2F1C; /* Marrom escuro do menu (padrão do style.css) */
     text-align: center;
     padding: 15px 0;
     border-bottom: 3px solid var(--secondary-color);
@@ -62,12 +63,13 @@ nav a {
     color: var(--secondary-color);
     text-decoration: none;
     margin: 0 20px;
-    padding: 8px 15px;
+    padding: 10px 15px; /* Ajuste para o padding maior */
     border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.4s, color 0.4s;
     font-family: 'Uncial Antiqua', cursive;
-    font-weight: normal;
+    font-weight: bold; /* Bold igual ao style.css */
     text-transform: uppercase;
+    font-size: 1.3em; /* Mais visível igual ao style.css */
 }
 
 nav a:hover {
@@ -75,31 +77,34 @@ nav a:hover {
     color: var(--primary-color);
 }
 
-/* Título do formulário */
+/* Título do formulário - PADRONIZADO */
 .container h2 {
     text-align: center;
     font-family: 'Cinzel', serif;
-    color: var(--accent-color);
+    color: var(--accent-color); /* Vermelho Épico */
     border-bottom: 2px solid var(--secondary-color);
     padding-bottom: 10px;
+    margin-top: 40px; /* Adicionado para bater com o h2 global */
+    margin-bottom: 30px; /* Adicionado para bater com o h2 global */
+    font-size: 2em; /* Adicionado para bater com o h2 global */
 }
 
-/* Formulário */
+/* Formulário (Manteve os detalhes específicos do contato) */
 form {
     max-width: 600px;
-    margin: 30px auto;
-    padding: 25px;
+    margin: 20px auto; /* Margin ajustada */
+    padding: 20px; /* Padding ajustado */
     border: 1px solid #ccc;
     border-radius: 8px;
-    background-color: #fff8dc; /* leve pergaminho */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background-color: #fff8e1; /* Fundo de pergaminho leve */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Adicionado shadow */
 }
 
 label {
     display: block;
-    margin-top: 12px;
+    margin-top: 10px; /* Margin ajustada */
     font-weight: bold;
-    color: var(--primary-color);
+    color: #333; /* Removida a cor primary-color para seguir o label padrão */
 }
 
 input[type="text"],
@@ -107,19 +112,20 @@ input[type="email"],
 textarea {
     width: 100%;
     padding: 10px;
-    margin-top: 6px;
+    margin-top: 5px; /* Margin ajustada */
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 4px; /* Raio ajustado */
     font-family: 'Georgia', serif;
-    background-color: #fffde7;
+    background-color: #fffde7; /* Mantido o fundo pergaminho */
+    box-sizing: border-box; /* Adicionado para garantir o width 100% */
 }
 
 button {
     background-color: var(--accent-color);
     color: white;
-    padding: 12px 20px;
+    padding: 10px 15px; /* Padding ajustado */
     border: none;
-    border-radius: 6px;
+    border-radius: 4px; /* Raio ajustado */
     cursor: pointer;
     margin-top: 15px;
     font-size: 1.1em;
@@ -127,10 +133,10 @@ button {
 }
 
 button:hover {
-    background-color: #d32f2f;
+    background-color: #a71b1b; /* Cor ajustada para o padrão do style.css */
 }
 
-/* Responsividade */
+/* Responsividade - PADRONIZADO */
 @media (max-width: 600px) {
     nav a {
         display: block;
@@ -142,14 +148,16 @@ button:hover {
     }
 }
 
-/* Footer */
+/* Footer - PADRONIZADO */
 footer {
     background-color: var(--primary-color);
-    color: var(--secondary-color);
+    color: var(--text-color); /* Dourado */
     text-align: center;
     padding: 20px;
-    border-top: 3px solid var(--secondary-color);
+    border-top: 4px solid var(--secondary-color); /* Borda mais espessa */
     margin-top: 40px;
+    font-size: 0.9em;
+    letter-spacing: 0.5px; /* Adicionado letter-spacing */
 }
 
 footer a {
@@ -160,12 +168,5 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-}
-@media (max-width: 900px) {
-    .destaque-card { width: calc(50% - 20px); }
-}
-@media (max-width: 600px) {
-    .destaque-card { width: 100%; }
-    .menu { flex-direction: column; }
-    .menu li { margin-bottom: 5px; }
+    color: #FFF8DC; /* Cor do hover ajustada */
 }

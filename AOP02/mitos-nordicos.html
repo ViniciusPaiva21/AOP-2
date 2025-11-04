@@ -4,15 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mitos Nórdicos - Portal Mitos e Lendas</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/favicon.png" type="image/png">
-
+    <nav>
+        <a href="index.html">
+        <img src="img/home-icon.png" alt="Home" style="width:60px; height:60px; vertical-align:middle; margin-right:10px;">
+        Home
+    </a>
+       <a href="deuses-gregos.html">
+    <img src="img/deus-grego-icon.png" alt="Deuses Gregos" style="width:60px; height:60px; vertical-align:middle; margin-right:10px;">
+    Deuses Gregos
+</a>
+        <a href="mitos-nordicos.html">
+    <img src="img/mitos-icon.png" alt="Mitos Nórdicos" style="width:60px; height:60px; vertical-align:middle; margin-right:10px;">
+    Mitos Nórdicos
+</a>
+        <a href="criaturas-miticas.html">Criaturas Míticas</a>
+        <a href="contatos.html">Contatos</a>
+    </nav>
+=======
+    <style>
+        /* (Manter o CSS inline para consistência) */
+        body { font-family: 'Georgia', serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header { background-color: #333; color: white; padding: 20px; text-align: center; }
+        nav { background-color: #222; padding: 10px 0; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; padding: 5px 10px; border-radius: 4px; transition: background-color 0.3s; }
+        nav a:hover { background-color: #555; }
+        .container { width: 80%; margin: 20px auto; padding: 20px; background-color: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    </style>
+>>>>>>> cf7d05dfacf0b799d2c5ef30d024842989abef2a
 </head>
 <body>
     <header>
         <h1>Portal Mitos e Lendas</h1>
     </header>
 
+<<<<<<< HEAD
+    <div class="container">
+        <div class="container">
+        <h2>🧊 A Épica Lenda dos Mitos Nórdicos e Ragnarok</h2>
+        
+        <p>A mitologia nórdica, registrada principalmente nas Eddas, é marcada por um profundo senso de destino e pelo fim glorioso e inevitável dos deuses no **Ragnarok**.<br>O centro de toda a existência é a árvore **Yggdrasil**, que conecta os Nove Mundos. Aqui desvendamos os mistérios das sagas, a coragem dos guerreiros e as histórias por trás dos reinos de Asgard, Midgard e Jotunheim.</p>
+
+        <h3>A Cosmologia: Os Nove Mundos</h3>
+        <p>No centro de tudo está a **Yggdrasil**, o Freixo do Mundo. Esta árvore sustenta e interliga nove reinos distintos. O destino de deuses e homens está ligado ao seu bem-estar.</p>
+        <ul>
+            <li>**Asgard:** O lar dos deuses Aesir, incluindo Odin, Thor e Loki.</li>
+            <li>**Midgard:** O mundo dos humanos (a Terra), conectado a Asgard pela ponte arco-íris, Bifrost.</li>
+            <li>**Jotunheim:** O lar dos Gigantes de Gelo (Jotuns), eternos inimigos dos deuses.</li>
+            <li>**Helheim:** O reino dos mortos, governado pela deusa Hela.</li>
+        </ul>
+
+        <hr>
+
+        <h3>Odin, o Pai de Todos</h3>
+        <p>Odin é a figura suprema, o deus da sabedoria, da poesia, da guerra e da magia.<br>Para obter seu vasto conhecimento, ele fez sacrifícios supremos: sacrificou um olho na fonte de Mimir para obter sabedoria e se pendurou na Yggdrasil por nove dias e noites para entender as runas.<br>
+            Seus companheiros constantes são os corvos **Huginn** (Pensamento) e **Muninn** (Memória), que voam por todos os Nove Mundos e retornam para lhe contar tudo o que viram.</p>
+
+        <h3>Thor, o Protetor da Humanidade</h3>
+        <p>Thor é o mais forte dos Aesir e o protetor de Midgard (a Terra). Seu poder reside em três itens mágicos:<br>
+        1. O martelo **Mjölnir** (que sempre retorna à sua mão).<br>
+        2. Um cinto de força que duplica seu vigor.<br>
+        3. Luvas de ferro para segurar o martelo.<br>
+        Sua história é marcada por batalhas constantes contra os gigantes de gelo, protegendo a ordem cósmica com sua força bruta e nobreza.</p>
+
+        <h3>Loki, o Mestre da Astúcia</h3>
+        <p>Loki não é um Aesir de sangue, mas um Gigante adotado por Odin. Ele é o deus da astúcia, do fogo e da trapaça.<br>
+            Sua natureza ambígua o torna tanto um auxiliar dos deuses quanto a fonte de quase todos os seus problemas.<br>
+            Apesar de seu humor caótico, é seu ato final de maldade — orquestrar a morte de Balder — que sela o destino de Asgard e inicia a contagem regressiva para o Ragnarok.</p>
+
+        <h3>Ragnarok: O Crepúsculo dos Deuses</h3>
+        <p>Ragnarok é a profecia do fim do ciclo: uma série de eventos que incluem três anos de inverno ininterrupto (Fimbulvetr), o despertar das criaturas de Loki (Fenrir e Jörmungandr) e a batalha final.<br>
+            Neste conflito, Odin é devorado por Fenrir, Thor mata Jörmungandr (mas morre pelo seu veneno) e os Nove Mundos são destruídos pelo fogo.<br>
+            No entanto, a história não termina aí: um novo mundo, verde e puro, renasce das águas, e um novo par de humanos repovoa a Terra, garantindo a natureza cíclica da existência nórdica.</p>
+    </div>
+    </div>
+    <div id="meu-rodape"></div>
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => document.getElementById('meu-rodape').innerHTML = data)
+    .catch(error => console.error('Erro ao carregar footer:', error));
+</script>
+
+=======
     <nav>
         <a href="index.html">Home</a>
         <a href="deuses-gregos.html">Deuses Gregos</a>
@@ -35,13 +111,6 @@
 
         <p>Aqui desvendamos os mistérios das sagas islandesas, a coragem dos guerreiros e as histórias por trás dos reinos de Asgard, Midgard e Jotunheim.</p>
     </div>
-   <div id="meu-rodape"></div>
-<script>
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => document.getElementById('meu-rodape').innerHTML = data)
-    .catch(error => console.error('Erro ao carregar footer:', error));
-</script>
-
+>>>>>>> cf7d05dfacf0b799d2c5ef30d024842989abef2a
 </body>
 </html>
