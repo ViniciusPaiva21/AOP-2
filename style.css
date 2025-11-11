@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Uncial+Antiqua&display=swap');
+
+/*
+ * Arquivo: style.css
+ * VERSÃO FINAL: Menu fixo + Fundo de Runas
+ */
+
+/* Variáveis de Cores (Paleta de cores Clássica/Épica) */
+:root {
+    --primary-color: #4B3621; /* Marrom pergaminho escuro (Cabeçalho/Rodapé) */
+    --secondary-color: #D4A017; /* Bronze/Dourado (Acento principal) */
+    --accent-color: #B71C1C; /* Vermelho Escuro (Títulos de Conteúdo/Destaque) */
+    --text-dark: #333; /* Cor do texto principal (mais escuro para legibilidade) */
+    --background-light: #F9F9F0; /* Fundo claro tipo pergaminho */
+    --background-dark: #2A2A2A;
+}
+
+/* Base (Panqueca 0 - O Prato) */
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0; 
+    background-color: var(--background-light);
+    color: var(--text-dark);
+}
+
+
+/* CONTAINER PRINCIPAL (Panqueca 2) */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    
+    /* MUDANÇA PARA AS RUNAS: Define a camada */
+    position: relative;
+    z-index: 2; 
+}
+
+/* PARÁGRAFOS E LEGIBILIDADE */
+.container p,
+.container ul,
+.container li,
+.resumo-explicativo p {
+    text-align: left !important; 
+    line-height: 1.75; 
+    margin-bottom: 1.5em; 
+}
+.container p {
+    text-indent: 1.5em; 
+}
+.container h2 + p, .container h3 + p, .container h4 + p {
+    text-indent: 0;
+}
+
+/* HIERARQUIA NO ARTIGO */
+.container h2 {
+    color: var(--accent-color);
+    text-align: center;
+    font-size: 2em;
+    margin-top: 40px; 
+    margin-bottom: 20px;
+}
+.container h2 + p {
+    margin-top: 1.5em;
+    font-style: italic; 
+}
+.container h3 {
+    margin-top: 3em; 
+    margin-bottom: 0.8em; 
+    color: var(--primary-color);
+    font-size: 1.4em;
+    text-align: center; 
+    font-weight: 700;
+}
+.container h4 {
+    margin-top: 2em;
+    margin-bottom: 0.6em;
+    font-size: 1.25em;
+    color: var(--accent-color);
+    text-align: center; 
+    font-weight: 700;
+}
+
+/* Header (Título que Rola) (Panqueca 2) */
+header {
+    background-color: var(--primary-color);
+    padding: 40px 20px 20px; 
+    text-align: center;
+    
+    /* MUDANÇA PARA AS RUNAS: Define a camada */
+    position: relative;
+    z-index: 2;
+
+    /* MUDANÇA PARA O MENU FIXO: Adiciona o espaço que o NAV ocupa */
+    margin-top: 65px; /* Ajuste este valor se 65px for pouco/muito */
+}
+header h1 {
+    color: var(--secondary-color);
+    margin: 0;
+    font-size: 3em;
+    letter-spacing: 2px;
+    font-family: 'Cinzel', serif;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Navegação (Menu Fixo) (Panqueca 4 - TOPO) */
+nav {
+    background-color: #3E2F1C; 
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 3px solid var(--secondary-color);
+    
+    /* REGRAS DO MENU FIXO */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Panqueca 4 (topo de tudo) */
+}
+nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 5px 10px; 
+    border-radius: 5px;
+    transition: background-color 0.4s, color 0.4s;
+    font-family: 'Uncial Antiqua', cursive;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+}
+nav a img {
+    margin-right: 8px;
+    width: 25px !important; 
+    height: 25px !important;
+    border-radius: 50%;
+    object-fit: cover;
+}
+nav a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* Seção de Resumo (Home) */
+.resumo-explicativo {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fffde7;
+    border-left: 5px solid var(--secondary-color);
+    border-radius: 5px;
+}
+.resumo-explicativo h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+}
+
+/* Destaques (Cards - Home) */
+.destaque-area { display: flex; justify-content: space-around; gap: 20px; flex-wrap: wrap; }
+.destaque-card { width: calc(33% - 20px); min-width: 280px; padding: 0; border: none; text-align: center; background-color: #FFFFFF; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; overflow: hidden; }
+.destaque-card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); }
+.destaque-card a { text-decoration: none; color: var(--text-dark); }
+.destaque-card img { width: 100%; height: 200px; object-fit: cover; display: block; border-bottom: 3px solid var(--secondary-color); }
+.destaque-card h3 { padding: 10px 0; color: var(--accent-color); margin: 5px 0; }
+.destaque-card p { padding: 0 15px 15px; font-size: 0.95em; color: #555; }
+
+/* Imagens no Artigo */
+.image-center { text-align: center; margin: 30px 0; }
+.image-center img { max-width: 100%; height: auto; border-radius: 5px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); }
+.image-center img.imagem-media { max-width: 60%; }
+
+/* Footer (Panqueca 2) */
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 4px solid var(--secondary-color);
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 2; 
+}
+footer a { color: #FFF8DC; text-decoration: none; font-weight: bold; }
+footer a:hover { text-decoration: underline; color: #FFF8DC; }
+
+/* REGRAS RESTANTES (Formulário, etc) */
+form { max-width: 600px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; background-color: #fff8e1; }
+label { display: block; margin-top: 10px; font-weight: bold; }
+input[type="text"], input[type="email"], textarea { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+button { background-color: var(--accent-color); color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; margin-top: 15px; font-size: 1.1em; }
+button:hover { background-color: #a71b1b; }
+.cta-button { display: inline-block; background-color: var(--secondary-color); color: var(--primary-color); padding: 12px 25px; margin-top: 20px; text-decoration: none; font-weight: bold; border-radius: 8px; transition: background-color 0.3s, color 0.3s; }
+.cta-button:hover { background-color: var(--accent-color); color: white; }
+.menu { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; }
+.menu li { position: relative; }
+.menu li a { display: block; padding: 10px 20px; }
+.submenu { display: none; position: absolute; top: 100%; left: 0; background-color: var(--background-dark); list-style: none; padding: 0; margin: 0; border: 1px solid var(--secondary-color); }
+.submenu li a { padding: 10px 20px; }
+.menu li:hover .submenu { display: block; }
+@media (max-width: 900px) { .destaque-card { width: calc(50% - 20px); } }
+@media (max-width: 600px) { .destaque-card { width: 100%; } .menu { flex-direction: column; } .menu li { margin-bottom: 5px; } }
+.tamanho { text-align: left; margin: 20px 0; max-width: 10px; }
+
+/* CSS DO CANVAS (Panqueca 1) */
+#runesCanvas {
+    position: fixed; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    z-index: 1; /* <<< CORRIGIDO: Panqueca 1 (atrás do conteúdo) */
+    mix-blend-mode: screen;
+    opacity: 0.9;
+}
+.background { 
+    position: fixed; 
+    inset: 0; 
+    background: url('img/Loki.jpg') center/cover no-repeat; 
+    z-index: 0; 
+    opacity: 0.4; 
+}
