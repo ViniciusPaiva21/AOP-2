@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Uncial+Antiqua&display=swap');
+
+/*
+ * Arquivo: style.css
+ * VERSÃO FINAL: Menu fixo + Fundo de Runas + Fundo de Pergaminho
+ */
+
+:root {
+    --primary-color: #4B3621;
+    --secondary-color: #D4A017;
+    --accent-color: #B71C1C;
+    --text-dark: #333;
+    --background-light: #F9F9F0;
+    --background-dark: #2A2A2A;
+}
+
+/* ===================== */
+/* BASE (Panqueca 0) */
+/* ===================== */
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, #F9F9F0 0%, #F9F9F0 50%, #F9F9F0 100%);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+/* ===================== */
+/* CAMADAS DO FUNDO */
+/* ===================== */
+
+/* Fundo do Pergaminho (Panqueca 0 - mais atrás) */
+.background {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle, #F9F9F0 0%, #F9F9F0 50%, #F9F9F0 100%);
+    z-index: 0;
+}
+
+/* Runas (Panqueca 1 - meio) */
+#runesCanvas {
+    position: fixed; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    z-index: 1;
+    opacity: 0.8;
+    mix-blend-mode: multiply; /* <<< tente isso */
+}
+
+/* ===================== */
+/* CONTEÚDO (Panqueca 2+) */
+/* ===================== */
+header, .container, footer {
+    position: relative;
+    z-index: 2;
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* ====== SEU CÓDIGO ORIGINAL ====== */
+/* (mantém tudo abaixo sem mudar, apenas reorganizei o início) */
+
+.container p,
+.container ul,
+.container li,
+.resumo-explicativo p {
+    text-align: left !important;
+    line-height: 1.75;
+    margin-bottom: 1.5em;
+}
+
+.container p {
+    text-indent: 1.5em;
+}
+
+.container h2 + p, .container h3 + p, .container h4 + p {
+    text-indent: 0;
+}
+
+.container h2 {
+    color: var(--accent-color);
+    text-align: center;
+    font-size: 2em;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.container h2 + p {
+    margin-top: 1.5em;
+    font-style: italic;
+}
+
+.container h3 {
+    margin-top: 3em;
+    margin-bottom: 0.8em;
+    color: var(--primary-color);
+    font-size: 1.4em;
+    text-align: center;
+    font-weight: 700;
+}
+
+.container h4 {
+    margin-top: 2em;
+    margin-bottom: 0.6em;
+    font-size: 1.25em;
+    color: var(--accent-color);
+    text-align: center;
+    font-weight: 700;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 40px 20px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin-top: 65px;
+}
+
+header h1 {
+    color: var(--secondary-color);
+    margin: 0;
+    font-size: 3em;
+    letter-spacing: 2px;
+    font-family: 'Cinzel', serif;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    background-color: #3E2F1C;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 3px solid var(--secondary-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.4s, color 0.4s;
+    font-family: 'Uncial Antiqua', cursive;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+}
+
+nav a img {
+    margin-right: 4px;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.resumo-explicativo {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fffde7;
+    border-left: 5px solid var(--secondary-color);
+    border-radius: 5px;
+}
+
+.resumo-explicativo h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+}
+
+.destaque-area {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.destaque-card {
+    width: calc(33% - 20px);
+    min-width: 280px;
+    padding: 0;
+    border: none;
+    text-align: center;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.destaque-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.destaque-card a {
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+.destaque-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.destaque-card h3 {
+    padding: 10px 0;
+    color: var(--accent-color);
+    margin: 5px 0;
+}
+
+.destaque-card p {
+    padding: 0 15px 15px;
+    font-size: 0.95em;
+    color: #555;
+}
+
+.image-center {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.image-center img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.image-center img.imagem-media {
+    max-width: 60%;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 4px solid var(--secondary-color);
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 2;
+}
+
+footer a {
+    color: #FFF8DC;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #FFF8DC;
+}
+
+/* Responsividade */
+@media (max-width: 900px) { .destaque-card { width: calc(50% - 20px); } }
+@media (max-width: 600px) { .destaque-card { width: 100%; } .menu { flex-direction: column; } .menu li { margin-bottom: 5px; } }

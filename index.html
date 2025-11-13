@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Portal Mitos e Lendas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <!-- Camada 1: Fundo animado das runas -->
+    <canvas id="runesCanvas"></canvas>
+
+    <!-- Camada 2: Conteúdo principal -->
+    <div class="content">
+        <nav>
+            <a href="index.html">
+                <img src="img/home-icon.png" alt="Home">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                Home
+            </a>
+            <a href="deuses-gregos.html">
+                <img src="img/odin2.jpg" alt="Deuses Gregos">
+                Deuses Gregos
+            </a>
+            <a href="mitos-nordicos.html">
+                <img src="img/mitos-icon.png" alt="Mitos Nórdicos">
+                Mitos Nórdicos
+            </a>
+            <a href="criaturas-miticas.html">
+                <img src="img/grifo-icon.png" alt="Criaturas Míticas">
+                Criaturas Míticas
+            </a>
+            <a href="contatos.html">
+                <img src="img/oraculo-icon.png" alt="Contatos">
+                Contatos
+            </a>
+        </nav>
+
+        <header>
+            <h1>Portal Mitos e Lendas</h1>
+        </header>
+
+        <div class="container">
+            <h2>📜 O Portal do Conhecimento Mitológico</h2>
+            <p><strong>Bem-vindo ao Portal Mitos e Lendas!</strong></p>
+
+            <p>Nossa missão é desmistificar e mergulhar nas histórias que moldaram a imaginação humana. Se você é um entusiasta de mitologia, um estudante ou apenas alguém em busca de narrativas épicas, este é o seu lugar. Aqui, transformamos lendas complexas em conteúdo acessível e fascinante, explorando desde o Olimpo grego até os Nove Mundos de Asgard. Use a navegação acima para iniciar sua jornada!</p>
+
+            <hr>
+
+            <h2>Conteúdos de Destaque</h2>
+
+            <div class="destaque-area">
+                <div class="destaque-card">
+                    <a href="deuses-gregos.html">
+                        <img src="img/olimpio.jpg" alt="Estátua de Zeus e o Olimpo">
+                    </a>
+                    <h3><a href="deuses-gregos.html">Deuses Gregos</a></h3>
+                    <p>O Olimpo em Detalhes: Conheça o Panteão Grego, as rivalidades familiares e o impacto de Zeus, Hera, Poseidon e Hades.</p>
+                </div>
+
+                <div class="destaque-card">
+                    <a href="mitos-nordicos.html">
+                        <img src="img/odin.jpg" alt="Martelo Mjölnir e a Árvore YggdDrasil">
+                    </a>
+                    <h3><a href="mitos-nordicos.html">Mitos Nórdicos</a></h3>
+                    <p>Além de Thor e Loki: Explore a cosmologia nórdica, a épica lenda do Ragnarok e a complexidade dos Nove Mundos.</p>
+                </div>
+
+                <div class="destaque-card">
+                    <a href="criaturas-miticas.html">
+                        <img src="img/mito1.jpg" alt="Imagem de um Grifo ou Fênix">
+                    </a>
+                    <h3><a href="criaturas-miticas.html">Criaturas Míticas</a></h3>
+                    <p>Fantasia e Terror: Um bestiário completo com as criaturas mais temidas e fascinantes das lendas antigas e medievais.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="meu-rodape"></div>
+    </div>
+
+    <script>
+        fetch('footer.html')
+          .then(response => response.text())
+          .then(data => document.getElementById('meu-rodape').innerHTML = data)
+          .catch(error => console.error('Erro ao carregar footer:', error));
+    </script>
+
+    <script src="runes.js"></script>
+</body>
+</html>

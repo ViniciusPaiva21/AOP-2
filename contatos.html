@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos - Portal Mitos e Lendas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">
+            <img src="img/home-icon.png" alt="Home" style="width:60px; height:60px; vertical-align:middle; margin-right:10px;"> Home
+        </a>
+        <a href="deuses-gregos.html">
+            <img src="img/odin2.jpg" alt="Deuses Gregos" style="width:60px; height:60px; vertical-align:middle; margin-right:10px;"> Deuses Gregos
+        </a>
+        <a href="mitos-nordicos.html">
+            <img src="img/mitos-icon.png" alt="Mitos Nórdicos" style="width:60px; height:60px; vertical-align:middle; margin-right:10px;"> Mitos Nórdicos
+        </a>
+        <a href="criaturas-miticas.html">
+            <img src="img/grifo-icon.png" alt="Criaturas Míticas" style="width:60px; height:60px; vertical-align:middle; margin-right:10px;"> Criaturas Míticas
+        </a>
+        <a href="contatos.html">
+            <img src="img/oraculo-icon.png" alt="Contatos" style="width:60px; height:60px; vertical-align:middle; margin-right:10px;"> Contatos
+        </a>
+    </nav>
+
+    <header>
+        <h1>Portal Mitos e Lendas</h1>
+    </header>
+
+    <div class="container" style="max-width:700px; padding: 20px;">
+        <h2>✉️ Oráculo de Contato</h2>
+        <p>Deseja enviar uma mensagem, sugestão de conteúdo ou propor uma parceria? Preencha o formulário abaixo e nosso "Oráculo" responderá em breve!</p>
+
+        <form action="#" method="POST" style="display:flex; flex-direction:column; gap:15px;">
+            <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
+            <input type="email" id="email" name="email" placeholder="E-mail" required>
+            <input type="text" id="assunto" name="assunto" placeholder="Assunto">
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Mensagem" required></textarea>
+            <button type="submit">Enviar Mensagem para o Oráculo</button>
+        </form>
+
+        <p style="text-align:center; margin-top:25px;">Siga-nos nas redes sociais:</p>
+        <div style="text-align:center; margin-top:10px; display:flex; justify-content:center; gap:20px;">
+            <a href="#" target="_blank">
+                <img src="img/facebook-icon.png" alt="Facebook" style="width:40px; height:40px; transition: transform 0.3s, filter 0.3s;">
+            </a>
+            <a href="#" target="_blank">
+                <img src="img/twitter-icon.png" alt="Twitter" style="width:40px; height:40px; transition: transform 0.3s, filter 0.3s;">
+            </a>
+            <a href="#" target="_blank">
+                <img src="img/instagram-icon.png" alt="Instagram" style="width:45px; height:45px; transition: transform 0.3s, filter 0.3s;">
+            </a>
+        </div>
+    </div>
+
+    <div id="meu-rodape"></div>
+    <script>
+        fetch('footer.html')
+          .then(response => response.text())
+          .then(data => document.getElementById('meu-rodape').innerHTML = data)
+          .catch(error => console.error('Erro ao carregar footer:', error));
+    </script>
+
+    <style>
+    /* ======== Ajustes Específicos para Contatos ======== */
+    form input, form textarea {
+        padding: 12px 18px;
+        border-radius: 15px;
+        border: 2px solid #B71C1C;
+        font-size: 1.1em;
+        font-family: 'Georgia', serif;
+        outline: none;
+        transition: all 0.3s ease;
+    }
+
+    form input:focus, form textarea:focus {
+        box-shadow: 0 0 12px #FFD700;
+        border-color: #FFD700;
+    }
+
+    button[type="submit"] {
+        padding: 12px 20px;
+        border-radius: 25px;
+        border: 2px solid #B71C1C;
+        background-color: #B71C1C;
+        color: #fff;
+        font-size: 1.2em;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    button[type="submit"]:hover {
+        box-shadow: 0 0 15px #FFD700, 0 6px 12px rgba(0,0,0,0.25);
+        transform: translateY(-2px) scale(1.05);
+    }
+
+    div a img:hover {
+        transform: scale(1.2);
+        filter: brightness(1.2);
+    }
+    </style>
+</body>
+</html>
