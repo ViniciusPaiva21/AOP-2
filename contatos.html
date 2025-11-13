@@ -6,6 +6,7 @@
     <title>Contatos - Portal Mitos e Lendas</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/favicon.png" type="image/png">
+<<<<<<< HEAD
 </head>
 <body>
 
@@ -27,10 +28,38 @@
         </a>
     </nav>
 
+=======
+    <nav>
+        <a href="index.html">
+        <img src="img/home-icon.png" alt="Home" style="width:60px; height:60px; vertical-align:middle; margin-right:10px;">
+        Home
+    </a>
+       <a href="deuses-gregos.html">
+    <img src="img/odin2.jpg" alt="Deuses Gregos" style="width:60px; height:60px; vertical-align:middle; margin-right:10px;">
+    Deuses Gregos
+</a>
+        <a href="mitos-nordicos.html">
+    <img src="img/mitos-icon.png" alt="Mitos Nórdicos" style="width:60px; height:60px; vertical-align:middle; margin-right:10px;">
+    Mitos Nórdicos
+</a>
+        <a href="criaturas-miticas.html">
+    <img src="img/grifo-icon.png" alt="Criaturas Míticas" style="width:60px; height:60px; vertical-align:middle; margin-right:10px;">
+    Criaturas Míticas
+</a>
+        <a href="contatos.html">
+    <img src="img/oraculo-icon.png" alt="Contatos" style="width:60px; height:60px; vertical-align:middle; margin-right:10px;">
+            Contatos
+        </a>
+    </nav>
+    </nav>
+</head>
+<body>
+>>>>>>> 0e708079977badb70e70d3a5c6208af489593538
     <header>
         <h1>Portal Mitos e Lendas</h1>
     </header>
 
+<<<<<<< HEAD
     <div class="container" style="max-width:700px; padding: 20px;">
         <h2>✉️ Oráculo de Contato</h2>
         <p>Deseja enviar uma mensagem, sugestão de conteúdo ou propor uma parceria? Preencha o formulário abaixo e nosso "Oráculo" responderá em breve!</p>
@@ -109,3 +138,39 @@
     </style>
 </body>
 </html>
+=======
+    <div class="container">
+        <h2>✉️ Oráculo de Contato</h2>
+        
+        <p>Deseja enviar uma mensagem, uma sugestão de conteúdo ou propor uma parceria? Preencha o formulário abaixo e nos envie sua mensagem. Nosso "Oráculo" responderá em breve!</p>
+
+        <form action="#" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="assunto">Assunto:</label>
+            <input type="text" id="assunto" name="assunto">
+            
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+            
+            <button type="submit">Enviar Mensagem ao Oráculo</button>
+        </form>
+
+        <p style="text-align: center; margin-top: 30px;">
+            **Siga-nos nas redes sociais:** <img src="#" alt="tt">
+        </p>
+    </div>
+    <div id="meu-rodape"></div>
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => document.getElementById('meu-rodape').innerHTML = data)
+    .catch(error => console.error('Erro ao carregar footer:', error));
+</script>
+</body>
+</html>
+>>>>>>> 0e708079977badb70e70d3a5c6208af489593538
