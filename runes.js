@@ -10,16 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const runeChars = ['ᚠ','ᚢ','ᚦ','ᚨ','ᚱ','ᚲ','ᚷ','ᚺ','ᚾ','ᛁ','ᛇ','ᛈ','ᛉ','ᛋ'];
   const rand = (min, max) => Math.random() * (max - min) + min;
 
-  // Mais runas na tela
   function createRunes() {
     runes.length = 0;
-    const runeCount = (W * H) / 15000; // dobra a densidade
+    const runeCount = (W * H) / 15000;
     for (let i = 0; i < runeCount; i++) {
       runes.push({
         x: rand(0, W),
         y: rand(-H, 0),
-        // AQUI está a velocidade (antes era até 1.3)
-        vy: rand(1.2, 3.5), // mais rápido
+        vy: rand(1.2, 3.5),
         size: rand(16, 36),
         char: runeChars[Math.floor(rand(0, runeChars.length))],
         alpha: rand(0.3, 0.6),
@@ -45,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
       ctx.globalAlpha = alpha;
       ctx.font = `${r.size}px 'Segoe UI Symbol', serif`;
 
-      // vermelho vibrante e brilho forte
       ctx.fillStyle = `rgba(255, 30, 30, 1)`; 
       ctx.shadowColor = `rgba(255, 0, 0, ${0.9 + pulse * 0.3})`;
       ctx.shadowBlur = 35 + pulse * 30;

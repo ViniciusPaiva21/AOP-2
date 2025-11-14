@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Uncial+Antiqua&display=swap');
 
-/*
- * Arquivo: style.css
- * VERSÃO FINAL: Menu fixo + Fundo de Runas + Fundo de Pergaminho
- */
-
 :root {
     --primary-color: #4B3621;
     --secondary-color: #D4A017;
@@ -14,9 +9,6 @@
     --background-dark: #2A2A2A;
 }
 
-/* ===================== */
-/* BASE (Panqueca 0) */
-/* ===================== */
 body {
     font-family: 'Georgia', serif;
     margin: 0;
@@ -26,11 +18,6 @@ body {
     overflow-x: hidden;
 }
 
-/* ===================== */
-/* CAMADAS DO FUNDO */
-/* ===================== */
-
-/* Fundo do Pergaminho (Panqueca 0 - mais atrás) */
 .background {
     position: fixed;
     inset: 0;
@@ -38,7 +25,7 @@ body {
     z-index: 0;
 }
 
-/* Runas (Panqueca 1 - meio) */
+
 #runesCanvas {
     position: fixed; 
     left: 0;
@@ -48,18 +35,14 @@ body {
     pointer-events: none; 
     z-index: 1;
     opacity: 0.8;
-    mix-blend-mode: multiply; /* <<< tente isso */
+    mix-blend-mode: multiply;
 }
 
-/* ===================== */
-/* CONTEÚDO (Panqueca 2+) */
-/* ===================== */
 header, .container, footer {
     position: relative;
     z-index: 2;
 }
 
-/* CONTAINER PRINCIPAL */
 .container {
     width: 90%;
     max-width: 1000px;
@@ -70,8 +53,6 @@ header, .container, footer {
     border-radius: 10px;
 }
 
-/* ====== SEU CÓDIGO ORIGINAL ====== */
-/* (mantém tudo abaixo sem mudar, apenas reorganizei o início) */
 
 .container p,
 .container ul,
@@ -281,6 +262,5 @@ footer a:hover {
     color: #FFF8DC;
 }
 
-/* Responsividade */
 @media (max-width: 900px) { .destaque-card { width: calc(50% - 20px); } }
 @media (max-width: 600px) { .destaque-card { width: 100%; } .menu { flex-direction: column; } .menu li { margin-bottom: 5px; } }
